@@ -1,12 +1,20 @@
-<template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+<script lang="tsx">
+import { createComponent, createElement } from '@vue/composition-api'
+
+const h = createElement
+
+export default createComponent({
+  setup: () => () => (
+    <div id="app">
+      <div id="nav">
+        <router-link to="/">Home</router-link> |&nbsp;
+        <router-link to="/about">About</router-link>
+      </div>
+      <router-view/>
     </div>
-    <router-view/>
-  </div>
-</template>
+  )
+})
+</script>
 
 <style lang="scss">
 #app {
